@@ -94,6 +94,10 @@ app.post("/", function(req, res){
   }
 });
 
+// app.get("/favicon.ico", function(req, res){
+//   res.sendStatus(204);
+// });
+
 app.post("/delete", function(req, res){
   //store item id from list.ejs
   const checkedItemId = req.body.checkbox;
@@ -160,9 +164,8 @@ app.get("/about", function(req, res){
 
 let port = process.env.PORT;
 if (port == null || port == "") {
-  port = 3000;
+  port = 8000;
 }
-app.listen(port);
 
 app.listen(port, function() {
   console.log("Server has started successfully");
